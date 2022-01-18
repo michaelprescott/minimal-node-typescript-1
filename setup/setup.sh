@@ -100,4 +100,6 @@ cat > ${newFileName} <<'EOL'
 }
 EOL
 
+curl -o .gitignore https://www.toptal.com/developers/gitignore/api/osx,node,windows,webstorm,jetbrains,sublimetext,visualstudiocode,yarn
+
 ## ============================================================================
