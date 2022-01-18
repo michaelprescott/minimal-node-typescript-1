@@ -1,4 +1,5 @@
-function start(arg: string | string[] | (() => string) | { s: string }): string {
+"use strict";
+function start(arg) {
   if (typeof arg === "string") {
     return commonCase(arg);
   } else if (Array.isArray(arg)) {
@@ -8,13 +9,11 @@ function start(arg: string | string[] | (() => string) | { s: string }): string 
   } else {
     return commonCase(arg.s);
   }
-
-  function commonCase(s: string): string {
+  function commonCase(s) {
     return s;
   }
 }
-
-let startStr = start((): string => {
+var startStr = start(function () {
   return "Hello, World!";
 });
 console.log(startStr);

@@ -1,0 +1,30 @@
+{
+  "name": "minimal-node-typescript-1",
+  "version": "1.0.0",
+  "description": "Minimalistic Node + TypeScript Project - 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf ./build",
+    "build:index:html": "cp ./src/index.html ./build/index.html",
+    "build:favicon": "cp ./src/favicon.ico ./build/favicon.ico",
+    "build:index": "tsc ./src/index.ts --outDir ./build --declaration true --declarationDir ./build",
+    "build": "tsc --project ./tsconfig.json",
+    "start": "npm run build:favicon && npm run build:index:html && npm run build && http-server ./build -p 8080 -o ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelprescott/minimal-node-typescript-1.git"
+  },
+  "keywords": [],
+  "author": "Michael Prescott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelprescott/minimal-node-typescript-1/issues"
+  },
+  "homepage": "https://github.com/michaelprescott/minimal-node-typescript-1#readme",
+  "devDependencies": {
+    "http-server": "^14.1.0",
+    "typescript": "^4.5.4"
+  }
+}
