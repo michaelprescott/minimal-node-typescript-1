@@ -12,7 +12,7 @@ Getting Started
     * https://github.com/nvm-sh/nvm#installing-and-updating
 2. Install Node.js using NVM
     * `nvm install node`
-3. From the root of the project director
+3. From the root of the project directory
     * `npm install`
     * `npm run start`
 

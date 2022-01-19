@@ -9,9 +9,9 @@
     "build:index:html": "mkdir -p ./build && cp ./src/index.html ./build/index.html",
     "build:favicon": "mkdir -p ./build && cp ./src/favicon.ico ./build/favicon.ico",
     "build:index": "tsc ./src/index.ts --outDir ./build --declaration true --declarationDir ./build",
-    "build:src": "tsc --project ./tsconfig.json"
+    "build:src": "tsc --project ./tsconfig.json",
     "build": "npm run build:favicon && npm run build:index:html && npm run build:src",
-    "start": "npm run build:src && http-server ./build -p 8080 -c-1 -o"
+    "start": "npm run build && http-server ./build -p 8080 -c-1 -o"
   },
   "repository": {
     "type": "git",
